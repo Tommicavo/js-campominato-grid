@@ -1,2 +1,35 @@
+:root{
+    --header_height: 80px;
+}
 
+/* Generics */
+header{
+    height: 80px;
+    padding: 0 2rem;
+}
 
+main{
+    background-color: aquamarine;
+    height: 100vh;
+}
+
+/* Utils */
+.myContainer{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 50px 0
+}
+
+.grid{
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell{
+    border: 1px solid black;
+    flex: 0 0 10%;
+}
