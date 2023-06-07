@@ -1,10 +1,17 @@
 console.log("js ok");
 
+const clickCell = (event, value) => {
+    console.log(`You clicked: ${value}`);
+    const node = event.target;
+    node.classList.toggle("clicked");
+}
+
 const createCell = (value, cellClass) => {
     const node = document.createElement("div");
     node.classList.add("cell");
     node.classList.add(cellClass);
     node.innerText = value;
+    node.addEventListener("click", () => {clickCell(event, value)});
     return node
 }
 
@@ -33,10 +40,4 @@ playButton.addEventListener("click", function(){
         const cell = createCell(i + 1, widthClass);
         grid.appendChild(cell);
     }
-
 });
-
-
-
-
-
