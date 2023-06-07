@@ -11,7 +11,7 @@ const createCell = (value, cellClass) => {
     node.classList.add("cell");
     node.classList.add(cellClass);
     node.innerText = value;
-    node.addEventListener("click", () => {clickCell(event, value)});
+    node.addEventListener("click", (event) => {clickCell(event, value)});
     return node
 }
 
