@@ -20,16 +20,33 @@ main{
     padding: 50px 0
 }
 
-.grid{
+#grid{
     width: 600px;
     height: 600px;
     margin: 0 auto;
-    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
+    /* border: 1px solid black; */
 }
 
 .cell{
     border: 1px solid black;
-    flex: 0 0 10%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
 }
+
+.easy{
+    flex-basis: 10%;
+}
+.medium{
+    flex-basis: calc(100% / 9);
+}
+.hard{
+    flex-basis: calc(100% / 7);
+}
+
+
